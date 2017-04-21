@@ -1,7 +1,7 @@
 import {Map, OrderedMap, Set, is} from 'immutable';
 import * as types from './actionTypes';
-import * as fields from './fields';
-import * as operators from './operators';
+import * as fields from './containers/fields';
+import * as operators from './containers/operators';
 
 let nextId = 0;
 
