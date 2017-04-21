@@ -14,6 +14,6 @@ let CheckboxList = ({ dispatch }) => {
 	)
 }
 
-CheckboxList = connect()(CheckboxList)
+CheckboxList = connect(store)(CheckboxList)
 
 export default CheckboxList	
