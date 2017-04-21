@@ -15,10 +15,14 @@ const initialState = Map({
 });
 
 function selectField(state, field) {
+  console.log(state)
+  console.log(field)
   return state.update('selectedFields', (fields) => fields.add(field));
 }
 
 function unselectField(state, field) {
+  console.log(state)
+  console.log(field)
   const selectedFields = state.get('selectedFields');
   const filterWithRemovedField = (filter) => is(filter.get('field'), field);
 

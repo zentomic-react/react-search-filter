@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import StringWidget from '../components/StringWidget';
 
 class FieldsSelector extends Component {
   render() {
@@ -12,7 +13,8 @@ class FieldsSelector extends Component {
   }
 
   renderField(field) {
-    const {name, displayName} = field;
+
+    const name = {name: 'abcd', displayName: 'lkdfsg', widget: StringWidget};
     const {selected, onSelect, onUnselect} = this.props;
     const checked = selected.contains(field);
     const onChange = (e) => {
@@ -24,10 +26,10 @@ class FieldsSelector extends Component {
     };
 
     return (
-      <li key={name}>
+      <li key={name.displayName}>
         <label>
           <input type="checkbox" checked={checked} onChange={onChange} />
-          {displayName}
+          {name.displayName}
         </label>
       </li>
     );

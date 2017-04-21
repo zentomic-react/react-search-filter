@@ -5,6 +5,7 @@ import reducer from '../reducer';
 
 const createStoreWithMiddleware = compose(
   applyMiddleware(thunk),
+  console.log(reducer.availableFields)
   //DevTools.instrument()
 )(createStore);
 

@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 import FieldsSelector from './../components/FieldsSelector';
-//import FilterList from './FilterList';
+
 import * as actionCreators from '../actionCreators';
 
 class App extends Component {
@@ -16,7 +16,7 @@ class App extends Component {
           onSelect={actions.selectField}
           onUnselect={actions.unselectField} />
 
-        //<FilterList />
+       
       </div>
     );
   }
